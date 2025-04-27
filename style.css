@@ -1,0 +1,291 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url(./montserrat/static/Montserrat-Black.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#navbar{
+    height: 125px;
+    width: 100%;
+    /* background-color: rgb(243, 68, 68); */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 85px;
+    padding: 0 150px;
+    position: fixed;
+    z-index: 4 ;
+}
+
+#navbar img{
+    height: 75px;
+    /* z-index: 2; */
+}
+
+#navbar h4{
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    position: fixed;
+    filter: brightness(75%);
+}
+
+#main{
+    position: relative;
+    /* background-color: rgba(0, 0, 0, 0.118); */
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#page1 h1{
+    font-size: 7.9vw;
+    font-weight: 900;
+    position: relative;
+    text-transform: uppercase;
+}
+
+#page1 h1::before{
+    content: "Eat. Drink. Play.";
+    position: absolute;
+    top:-1.6%;
+    left: -0.3%;
+    color: black;
+    z-index: -1;
+    -webkit-text-stroke: 2px #95C11E;
+}
+
+#page1 h2{
+    font-size: 1.8vw;
+    font-weight: 850;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#page1 p{
+    font-size: 1.2vw;
+    font-weight: 500;
+    position: relative;
+    width: 50%;
+    z-index: 3;
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    z-index: 3;
+}
+
+#cursor{
+    height: 18px;
+    width: 18px;
+    position: fixed;
+    border-radius: 50%;
+    background-color: #95C11E;
+    z-index: 5;
+    transition: ease-out all 0.2s;
+}
+
+#cursor-blur{
+    height: 400px;
+    width: 400px;
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(70px);
+    background-color: #96c11e6f;
+    z-index: 2;
+    transition: ease-out all 0.2s;
+}
+
+#scroll-text::-webkit-scrollbar{
+    display: none;
+}
+
+#scroll-text{
+    white-space: nowrap;
+    position: relative;
+    z-index: 3;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#scroll-text-1{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+}
+
+#scroll-text-1 h4{
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    font-size: 120px;
+    margin-right: 20px;
+    color: rgba(0, 0, 0, 0.679);
+    -webkit-text-stroke: 1.5px rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 7px;
+    transition: all linear 0.4s;
+    z-index: 3;
+}
+
+#scroll-text-1 h4:hover{
+    color: #95C11E;
+    -webkit-text-stroke: 2px #95C11E;
+}
+
+@keyframes scroll{
+    from{ 
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+/* #scroll-text h4:hover::after{
+    content: " ";
+    background-color: #95C11E;
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+} */
+
+#about-us{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    gap:50px;
+    margin-top: 115px;
+    margin-bottom: 115px;
+}
+
+#about-us-in{
+    text-align: center;
+    width: 60%;
+    z-index: 3;
+}
+
+#about-us-in h1{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+#about-us-in p{
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: 0.7px;
+}
+
+#about-us img{
+    height: 220px;
+    width: 220px;
+    border-radius: 20px;
+    object-fit: cover;
+    z-index: 3;
+}
+
+
+#cards{
+    height: 58vh;
+    width: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:80px;
+}
+
+.card{
+    height: 80%;
+    width: 25%;
+    /* background-color: #96c11e6f; */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    z-index: 3;
+    /* padding: 10px; */
+}
+
+#card-1{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+
+#card-2{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+
+#card-3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    padding-top: 130px;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 11px;
+    overflow: hidden;
+    border-radius: 20px;
+    opacity: 0;
+    transition: all ease 0.6s;
+    z-index: 3;
+}
+
+.overlay h4{
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.overlay p{
+    width: 90%;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.card:hover .overlay{
+    opacity: 1;
+}
