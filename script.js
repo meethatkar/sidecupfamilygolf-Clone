@@ -6,7 +6,7 @@ document.addEventListener("mousemove",function(dets){
     crsr.style.top = dets.y-7+"px"
     crsr_blur.style.left = dets.x-200+"px"
     crsr_blur.style.top = dets.y-200+"px"
-    console.log(crsr.style.left);
+    // console.log(crsr.style.left);
 })
 
 gsap.to("#navbar",{
@@ -120,18 +120,21 @@ gsap.to(".elem",{
     }
 })
 
-var logos = document.querySelectorAll("#logos i");
+var logos = document.querySelectorAll(".ri-instagram-line,.ri-facebook-box-fill");
 logos.forEach(function(elem){
     elem.addEventListener("mouseenter",function(){
         crsr.style.backgroundColor = "transparent"
         crsr.style.border = "1px solid black"
-        crsr.style.scale =3;
+        crsr.style.transform = "scale(3)";
+        // elem.style.setProperty("color", "#000", "important"); // Alternative
+        elem.style.color = "#000 !important"; // Force black
         console.log("Hovered", elem);
     })
     elem.addEventListener("mouseleave",function(){
-        crsr.style.scale = 1;
+        crsr.style.transform = "scale(1)";
         crsr.style.backgroundColor = "#95C11E";
         crsr.style.border = "0px solid #95C11E";
+        elem.style.setProperty("color", "#fff", "important"); // Alternative
         console.log("UnHovered", elem);
     })
 })
