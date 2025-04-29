@@ -96,25 +96,42 @@ nav_H4_All.forEach(function(elem){
         crsr.style.border = "1px solid #fff"
         crsr.style.backgroundColor = "transparent"
         crsr.style.cursor = "pointer"
+        elem.style.color = "#95C11E"
     });
     elem.addEventListener("mouseleave",function(){
         crsr.style.scale= 1
         crsr.style.backgroundColor = "#95C11E"
         crsr.style.border = "1px solid #95C11E"
         crsr.style.cursor = "default"
-
+        elem.style.color = "white"
     });
 });
 
 gsap.to(".elem",{
-    y:37,
-    duration:1,
+    y:40,
+    // duration:1,
     scrollTrigger:{
         trigger:".elem",
         scroller:"body",
         // markers:true,
-        start: "top 94%",
-        end: "top 84%",
+        start: "top 90%",
+        end: "top 80%",
         scrub:1,
     }
+})
+
+var logos = document.querySelectorAll("#logos i");
+logos.forEach(function(elem){
+    elem.addEventListener("mouseenter",function(){
+        crsr.style.backgroundColor = "transparent"
+        crsr.style.border = "1px solid black"
+        crsr.style.scale =3;
+        console.log("Hovered", elem);
+    })
+    elem.addEventListener("mouseleave",function(){
+        crsr.style.scale = 1;
+        crsr.style.backgroundColor = "#95C11E";
+        crsr.style.border = "0px solid #95C11E";
+        console.log("UnHovered", elem);
+    })
 })
