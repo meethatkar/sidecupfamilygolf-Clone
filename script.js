@@ -92,14 +92,14 @@ gsap.to("#colon1", {
 //   console.log(nav_H4_All);
 nav_H4_All.forEach(function(elem){
     elem.addEventListener("mouseenter",function(){
-        crsr.style.scale= 3
+        crsr.style.transform= "scale(3)"
         crsr.style.border = "1px solid #fff"
         crsr.style.backgroundColor = "transparent"
         crsr.style.cursor = "pointer"
         elem.style.color = "#95C11E"
     });
     elem.addEventListener("mouseleave",function(){
-        crsr.style.scale= 1
+        crsr.style.transform= "scale(1)"
         crsr.style.backgroundColor = "#95C11E"
         crsr.style.border = "1px solid #95C11E"
         crsr.style.cursor = "default"
