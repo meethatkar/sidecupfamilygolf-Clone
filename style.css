@@ -634,3 +634,110 @@ text-align: center;
         font-size: 2.7vw;
     }
 }
+
+@media (max-width:500px){
+    #navbar{
+        height: 65px;
+        width: 100vw;
+        padding: 0px 20px;
+        gap: 20px;
+    }
+    #navbar>img{
+        height: 6.7vw;
+    }
+    #navbar>h4{
+        font-size: 2vw;
+    }
+
+    #page1>h1{
+        font-size: 9.5vw;
+    }
+    #page1>h2{
+        font-size: 3.4vw;
+    }
+    #page1>p{
+        font-size: 2.6vw;
+        line-height: 3vw;
+        width: 70%;
+    }
+
+    #page1{
+        height: 100vh;
+    }
+    /* #page2{
+        background-color: #0A9D3B;
+    } */
+    #scroll-text-1>h4{
+        font-size: 50px;
+    }
+
+    #about-us{
+        gap: 15px;
+        padding: 0 10px;
+        margin-bottom: 50px;
+    }
+    #about-us>img{
+        height: 80px;
+        width: 80px;
+    }
+    #about-us-in>h1{
+        font-size: 20px;
+    }
+    #about-us-in>p{
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 0.6px;
+    }
+
+    #cards{
+        gap: 10px;
+        height: 20vh;
+        margin-bottom: 20px;
+    }
+    .card{
+        height: 60%;
+        width: 28%;
+        scale: 1;
+    }
+    .overlay{
+        padding-top: 6px;
+    }
+    .overlay>h4{
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    .overlay>p{
+        font-size: 8px;
+        line-height: 9px
+    }
+
+    #signup-para{
+        height: 10vh;
+    }
+    #signup-para>h4{
+        font-size: 3vw;
+        width: 70%;
+    }
+    #page3{
+        height: 30vh;
+        background-color: #0A9D3B;
+    }
+    #reviews>img{
+        height: 5vw;
+    }
+    #reviews>h4{
+        font-size: 3vw;
+        line-height: 3.7vw;
+    }
+
+    #page4{
+        gap: 40px;
+        padding: 0 30px;
+    }
+    .elem{
+        width: 40%;
+    }
+    .elem>h1{
+        font-size: 2.7vw;
+    }
+}
