@@ -473,7 +473,7 @@ text-align: center;
 }
 
 #logo{
-    height: 100px;
+    height: 8vw;
     position: relative;
     z-index: 3;
 }
@@ -522,7 +522,7 @@ text-align: center;
 }
 
 #footer p{
-    font-size: 22px;
+    font-size: 1.6vw;
     font-weight: 100;
     line-height: 28px;
     margin-bottom: 15px;
@@ -538,4 +538,99 @@ text-align: center;
     transition: all ease 0.4s;
     position: relative;
     z-index: 3;
+}
+
+@media (max-width:800px){
+    #navbar{
+        height: 80px;
+        width: 100vw;
+        padding: 0px 70px;
+        gap: 40px;
+    }
+    #navbar>img{
+        height: 5vw;
+    }
+    #navbar>h4{
+        font-size: 1.3vw;
+    }
+
+    #page1>h1{
+        font-size: 8.5vw;
+    }
+    #page1>h2{
+        font-size: 2.4vw;
+    }
+    #page1>p{
+        font-size: 1.6vw;
+        width: 60%;
+    }
+
+    #scroll-text-1>h4{
+        font-size: 85px;
+    }
+
+    #about-us{
+        gap: 25px;
+        padding: 0 20px;
+    }
+    #about-us>img{
+        height: 120px;
+        width: 120px;
+    }
+    #about-us-in>h1{
+        font-size: 30px;
+    }
+    #about-us-in>p{
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 1px;
+    }
+
+    #cards{
+        gap: 20px;
+        height: 50vh;
+    }
+    .card{
+        height: 60%;
+        width: 27%;
+        scale: 1;
+    }
+    .overlay{
+        padding-top: 10px;
+    }
+    .overlay>h4{
+        font-size: 17px;
+        margin-bottom: 8px;
+    }
+    .overlay>p{
+        font-size: 10px;
+        line-height: 12px
+    }
+
+    #signup-para{
+        height: 30vh;
+    }
+    #signup-para>h4{
+        font-size: 3vw;
+        width: 70%;
+    }
+    
+    #reviews>img{
+        height: 5vw;
+    }
+    #reviews>h4{
+        font-size: 3vw;
+        line-height: 3.7vw;
+    }
+
+    #page4{
+        gap: 40px;
+        padding: 0 30px;
+    }
+    .elem{
+        width: 40%;
+    }
+    .elem>h1{
+        font-size: 2.7vw;
+    }
 }

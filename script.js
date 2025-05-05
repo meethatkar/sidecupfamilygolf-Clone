@@ -1,5 +1,6 @@
 var crsr = document.querySelector("#cursor");
 var crsr_blur = document.querySelector("#cursor-blur");
+var window = this;
 
 document.addEventListener("mousemove",function(dets){
     crsr.style.left = dets.x-7+"px"
@@ -8,7 +9,7 @@ document.addEventListener("mousemove",function(dets){
     crsr_blur.style.top = dets.y-200+"px"
     // console.log(crsr.style.left);
 })
-
+if(window.innerWidth>800){
 gsap.to("#navbar",{
     backgroundColor: "#000",
     height:"105px",
@@ -22,7 +23,24 @@ gsap.to("#navbar",{
         scrub: 1.5
     }
 })
+}
 
+//RESPONSIVE
+else if(window.innerWidth<800 && window.innerWidth>400){
+    gsap.to("#navbar",{
+        backgroundColor: "#000",
+        height:"60px",
+        duration: 1,
+        scrollTrigger:{
+            trigger: "#navbar",
+            scroller: "body",
+            // markers: true,
+            start: "top -10%",
+            end: "top 11%",
+            scrub: 1.5
+        }
+    })  
+}
 gsap.to("#main",{
     backgroundColor: "#000000f3",
     scrollTrigger: {
@@ -61,6 +79,24 @@ gsap.to("#cards",{
         scrub:1
     },
 });
+
+//RESPONSIVE
+if(window.innerWidth < 800 && window.innerWidth > 500){
+    gsap.to("#cards",{
+        scale: 1.04,
+        duration:1,
+        stagger:0.1,
+        scrollTrigger:{
+            trigger: "#cards",
+            scroller: "body",
+            start: "top 70%",
+            end: "top 60%",
+            // markers:true,
+            scrub:1
+        },
+    });
+    
+}
 
 gsap.to("#colon1", {
     y: 40,
