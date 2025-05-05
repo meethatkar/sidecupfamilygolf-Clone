@@ -23,24 +23,6 @@ gsap.to("#navbar",{
         scrub: 1.5
     }
 })
-}
-
-//RESPONSIVE
-else if(window.innerWidth<800 && window.innerWidth>400){
-    gsap.to("#navbar",{
-        backgroundColor: "#000",
-        height:"60px",
-        duration: 1,
-        scrollTrigger:{
-            trigger: "#navbar",
-            scroller: "body",
-            // markers: true,
-            start: "top -10%",
-            end: "top 11%",
-            scrub: 1.5
-        }
-    })  
-}
 gsap.to("#main",{
     backgroundColor: "#000000f3",
     scrollTrigger: {
@@ -51,7 +33,6 @@ gsap.to("#main",{
         scrub: 1.5
     }
 })
-
 gsap.to("#about-us img,#about-us-in",{
     // y: 90,
     opacity: 1,
@@ -65,20 +46,103 @@ gsap.to("#about-us img,#about-us-in",{
         scrub: 1
     },
 });
+}
 
-gsap.to("#cards",{
-    scale: 1.04,
-    duration:1,
-    stagger:0.1,
-    scrollTrigger:{
-        trigger: "#cards",
-        scroller: "body",
-        start: "top 70%",
-        end: "top 60%",
-        // markers:true,
-        scrub:1
-    },
-});
+//RESPONSIVE
+else if(window.innerWidth<800 && window.innerWidth>500){
+    gsap.to("#navbar",{
+        backgroundColor: "#000",
+        height:"60px",
+        duration: 1,
+        scrollTrigger:{
+            trigger: "#navbar",
+            scroller: "body",
+            // markers: true,
+            start: "top -10%",
+            end: "top 11%",
+            scrub: 1.5
+        }
+    })  
+    gsap.to("#main",{
+        backgroundColor: "#000000f3",
+        scrollTrigger: {
+            trigger: "#main",
+            scroller: "body",
+            start: "top -25%",
+            end: "top -65%",
+            scrub: 1.5
+        }
+    })
+    gsap.to("#about-us img,#about-us-in",{
+        // y: 90,
+        opacity: 1,
+        duration:1,
+        scrollTrigger:{
+            trigger: "#about-us",
+            scroller: "body",
+            start: "top 80%",
+            end: "top 65%",
+            // markers:true,
+            scrub: 1
+        },
+    });
+}
+
+else if(window.innerWidth<500){
+    gsap.to("#navbar",{
+        backgroundColor: "#000",
+        height:"55px",
+        duration: 1,
+        scrollTrigger:{
+            trigger: "#navbar",
+            scroller: "body",
+            // markers: true,
+            start: "top -10%",
+            end: "top 11%",
+            scrub: 1.5
+        }
+    })  
+    gsap.to("#main",{
+        backgroundColor: "#0000000",
+        scrollTrigger: {
+            trigger: "#main",
+            scroller: "body",
+            start: "top -15%",
+            end: "top -35%",
+            scrub: 1.5
+        }
+    })
+
+    gsap.to("#about-us img,#about-us-in",{
+        // y: 90,
+        opacity: 1,
+        duration:1,
+        scrollTrigger:{
+            trigger: "#about-us",
+            scroller: "body",
+            start: "top 80%",
+            end: "top 65%",
+            // markers:true,
+            scrub: 1
+        },
+    });
+
+    gsap.to("#cards",{
+        scale: 1.04,
+        duration:1,
+        stagger:0.1,
+        scrollTrigger:{
+            trigger: "#cards",
+            scroller: "body",
+            start: "top 70%",
+            end: "top 60%",
+            // markers:true,
+            scrub:1
+        },
+    });
+
+}
+
 
 //RESPONSIVE
 if(window.innerWidth < 800 && window.innerWidth > 500){
@@ -95,6 +159,20 @@ if(window.innerWidth < 800 && window.innerWidth > 500){
             scrub:1
         },
     });
+
+    gsap.to("#cards",{
+    scale: 1.04,
+    duration:1,
+    stagger:0.1,
+    scrollTrigger:{
+        trigger: "#cards",
+        scroller: "body",
+        start: "top 70%",
+        end: "top 60%",
+        // markers:true,
+        scrub:1
+    },
+});
     
 }
 
