@@ -46,6 +46,21 @@ gsap.to("#about-us img,#about-us-in",{
         scrub: 1
     },
 });
+
+
+gsap.to("#cards",{
+    scale: 1.04,
+    duration:1,
+    stagger:0.1,
+    scrollTrigger:{
+        trigger: "#cards",
+        scroller: "body",
+        start: "top 70%",
+        end: "top 60%",
+        // markers:true,
+        scrub:1
+    },
+});
 }
 
 //RESPONSIVE
@@ -195,8 +210,8 @@ gsap.to("#colon1", {
     scrollTrigger:{
         trigger:"#colon2",
         scroller: "body",
-        start: "top 110%",
-        end: "top 100%",
+        start: "top 100%",
+        end: "top 90%",
         // markers:true,
         scrub: 4
     },
